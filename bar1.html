@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message</title>
+
+<style>
+body {
+    background-image: url('keer.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* better than fixed height */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+}
+
+/* TEXT ABOVE */
+p {
+    font-size: 18px;
+    color: red;
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+/* BOX */
+.text-box {
+    position: relative;
+    width: 90%;
+    max-width: 350px; /* mobile friendly */
+    min-height: 400px; /* instead of fixed 800 */
+    background-color: #ffffff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* MESSAGE */
+.text-content {
+    display: none;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    overflow-y: auto; /* scroll if text is long */
+    max-height: 70vh;
+}
+
+/* IMAGE COVER */
+.image-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('m8.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+}
+
+/* WHEN OPEN */
+.text-box.open .text-content {
+    display: block;
+}
+
+.text-box.open .image-cover {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* TABLET / DESKTOP */
+@media (min-width: 768px) {
+    .text-box {
+        max-width: 400px;
+        min-height: 600px;
+    }
+
+    .text-content {
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<p>CLICK ON THE IMAGE</p>
+
+<div class="text-box" id="textBox">
+    <div class="image-cover"></div>
+
+    <div class="text-content">
+        Dear Mom and Dad,<br><br>
+        Happy Anniversary to both of you. I feel very lucky to be your child. 
+        You have always taken care of me with so much love and patience.<br><br>
+
+        Your journey is not just about happy moments, but also about how you 
+        supported each other during difficult times. That is what makes your 
+        bond so strong and beautiful.<br><br>
+
+        I always wanted to say “I love you,” but I couldn’t say it directly, 
+        so I am saying it like this.<br><br>
+
+        I truly love you both more than I can express.<br><br>
+
+        ❤️ I Love you both so much. Happy Anniversary! ❤️
+    </div>
+</div>
+
+<script>
+document.getElementById('textBox').addEventListener('click', function() {
+    this.classList.toggle('open');
+});
+</script>
+
+</body>
+</html>

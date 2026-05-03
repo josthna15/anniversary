@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>friend</title>
+
+<style>
+body {       
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('keer.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* HEADER */
+header {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header .contact-info {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+header .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header .social-icons a {
+    margin: 5px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px 10px;
+}
+
+.hero h1 {
+    font-size: 26px; /* smaller for mobile */
+    color: #c33161;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+/* IMAGE RESPONSIVE */
+.anniversary-image {
+    margin: 20px auto;
+    width: 90%;        /* responsive width */
+    max-width: 350px; /* limit size */
+    aspect-ratio: 1/1; /* keep square */
+    background-image: url(M2.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+/* HEARTS (optional: hide on small screens if messy) */
+.hearts {
+    display: none;
+}
+
+/* TABLET / DESKTOP */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .anniversary-image {
+        max-width: 500px;
+    }
+
+    .hearts {
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="contact-info">
+        FROM JOTHSNA
+    </div>
+
+    <div class="social-icons">
+        <a href="index.html">ANNIVERSARY</a>
+        <a href="bar1.html">NOTE</a>
+        <a href="memories.html">MEMORIES</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>HAPPY 25TH ANNIVERSARY DADDY AND MUMMY</h1>
+    <p>MY FAVORITE PEOPLE</p>
+
+    <div class="anniversary-image"></div>
+</section>
+
+</body>
+</html>
